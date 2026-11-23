@@ -1,0 +1,49 @@
+===== CONFIGURED DNS SERVERS =====
+10.185.128.177
+10.185.128.32
+===== PRIMARY DNS SHOULD FAIL =====
+
+; <<>> DiG 9.10.6 <<>> @10.185.128.177 app.team1.test +time=1 +tries=1
+; (1 server found)
+;; global options: +cmd
+;; connection timed out; no servers could be reached
+===== BACKUP DNS SHOULD WORK =====
+
+; <<>> DiG 9.10.6 <<>> @10.185.128.32 app.team1.test +time=1 +tries=1
+; (1 server found)
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 52132
+;; flags: qr aa rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+;; QUESTION SECTION:
+;app.team1.test.			IN	A
+
+;; ANSWER SECTION:
+app.team1.test.		30	IN	A	10.185.128.147
+
+;; Query time: 92 msec
+;; SERVER: 10.185.128.32#53(10.185.128.32)
+;; WHEN: Tue Nov 24 03:44:14 IST 2026
+;; MSG SIZE  rcvd: 59
+
+===== SYSTEM DNS LOOKUP =====
+name: app.team1.test
+ip_address: 10.185.128.147
+
+===== HTTPS DURING PRIMARY DNS OUTAGE =====
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100    32  100    32    0     0    596      0 --:--:-- --:--:-- --:--:--   603
+HTTP/1.1 200 OK
+Server: nginx/1.31.6
+Date: Mon, 23 Nov 2026 22:14:15 GMT
+Content-Type: application/json
+Content-Length: 32
+Connection: keep-alive
+X-Backend: B
+Cache-Control: no-store
+
+{"backend": "B", "status": "ok"}

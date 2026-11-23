@@ -1,0 +1,23 @@
+===== PRIMARY DNS RECOVERY =====
+DNS Query 1
+
+; <<>> DiG 9.10.6 <<>> @10.185.128.177 app.team1.test +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+app.team1.test.		30	IN	A	10.185.128.147
+DNS Query 2
+
+; <<>> DiG 9.10.6 <<>> @10.185.128.177 app.team1.test +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+app.team1.test.		30	IN	A	10.185.128.147
+DNS Query 3
+
+; <<>> DiG 9.10.6 <<>> @10.185.128.177 app.team1.test +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+app.team1.test.		30	IN	A	10.185.128.147
+===== APPLICATION AFTER RECOVERY =====
+HTTP/1.1 200 OK
+Server: nginx/1.31.6
+X-Backend: A

@@ -1,0 +1,20 @@
+===== DNS TTL TEST =====
+Tue Nov 24 03:51:04 IST 2026
+===== PRIMARY DNS TTL =====
+
+; <<>> DiG 9.10.6 <<>> @10.185.128.177 app.team1.test +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+app.team1.test.		30	IN	A	10.185.128.147
+===== BACKUP DNS TTL =====
+
+; <<>> DiG 9.10.6 <<>> @10.185.128.32 app.team1.test +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+app.team1.test.		30	IN	A	10.185.128.147
+===== API DNS TTL =====
+
+; <<>> DiG 9.10.6 <<>> @10.185.128.177 api.team1.test +time=2 +tries=1 +noall +answer
+; (1 server found)
+;; global options: +cmd
+api.team1.test.		30	IN	A	10.185.128.147

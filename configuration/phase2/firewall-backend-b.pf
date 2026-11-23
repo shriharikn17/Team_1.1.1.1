@@ -1,0 +1,4 @@
+# Mac 4 - Backend B firewall
+# Allow only active edge (Mac 2)
+pass in quick on en0 inet proto tcp from 10.185.128.147 to 10.185.128.32 port 3002 keep state
+block drop in quick on en0 inet proto tcp from any to 10.185.128.32 port 3002

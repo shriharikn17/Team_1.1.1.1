@@ -1,0 +1,33 @@
+===== BACKEND HIGH AVAILABILITY =====
+Tue Nov 24 03:53:33 IST 2026
+===== HEALTHY BACKEND DISTRIBUTION =====
+Request 1
+HTTP/1.1 200 OK
+X-Backend: B
+Request 2
+HTTP/1.1 200 OK
+X-Backend: B
+Request 3
+HTTP/1.1 200 OK
+X-Backend: A
+Request 4
+HTTP/1.1 200 OK
+X-Backend: B
+Request 5
+HTTP/1.1 200 OK
+X-Backend: A
+Request 6
+HTTP/1.1 200 OK
+X-Backend: B
+Request 7
+HTTP/1.1 200 OK
+X-Backend: A
+Request 8
+HTTP/1.1 200 OK
+X-Backend: B
+Request 9
+HTTP/1.1 200 OK
+X-Backend: A
+Request 10
+HTTP/1.1 200 OK
+X-Backend: B

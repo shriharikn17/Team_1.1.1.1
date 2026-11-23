@@ -33,3 +33,10 @@
 
 ## Security note
 The TLS private key is intentionally not included in this repository/package.
+
+## Phase 2 submission
+- `PHASE2.md` — architecture and completion summary
+- `configuration/phase2/` — DNS, nginx and firewall configurations
+- `evidence/09-phase2/` — evidence for Extensions A–F
+
+TLS private keys remain excluded.

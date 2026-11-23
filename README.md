@@ -250,3 +250,7 @@ Screenshot evidence is included for all five failure scenarios.
 ## Security Note
 
 Do not commit the TLS private key (`app.team1.test.key`) or any other private key material. The repository documents the path only.
+
+## Phase 2
+
+See [PHASE2.md](PHASE2.md) for the Phase 2 implementation, configuration and evidence.
